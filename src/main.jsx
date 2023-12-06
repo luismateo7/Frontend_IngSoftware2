@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import Movimientos from './pages/Movimientos'
 import Login from './pages/Login'
 import Registro from './pages/Registro'
+import Perfil from './pages/Perfil'
 import './index.css'
 
 import {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/movimientos",
         element: <Movimientos />
+      },
+      {
+        path: "/perfil",
+        element: <Perfil />
       },
     ],
   },

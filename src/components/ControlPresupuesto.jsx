@@ -60,7 +60,7 @@ const ControlPresupuesto = ({ presupuesto, gastos, setGastos, setPresupuesto, se
                     setGastos([])
                     setPresupuesto(0)
                     setIsValidPresupuesto(false)
-                    axios.put('https://backendingsoftware2-production.up.railway.app/api/usuarios/resetear-movimientos', {}, config)
+                    axios.put('http://localhost:4000/api/usuarios/resetear-movimientos', {}, config)
                 })
             }
         })
