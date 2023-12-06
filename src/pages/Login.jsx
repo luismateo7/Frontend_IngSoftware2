@@ -35,7 +35,7 @@ export default function Login() {
         }
 
         try {
-            const { data } = await axios.post(`https://backend-ing-software-2-juv5yvm2l-luismateo7.vercel.app/api/usuarios/login`, { email, password })
+            const { data } = await axios.post(`backendingsoftware2-production.up.railway.app/api/usuarios/login`, { email, password })
 
             localStorage.setItem('token', data.token);
 

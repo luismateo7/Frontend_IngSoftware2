@@ -27,7 +27,7 @@ const NuevoPresupuesto = ({ presupuesto, setPresupuesto, setIsValidPresupuesto }
     setIsValidPresupuesto(true);
 
     try {
-      await axios.put('https://backend-ing-software-2-juv5yvm2l-luismateo7.vercel.app/api/usuarios/actualizar-presupuesto', { presupuesto }, config);
+      await axios.put('backendingsoftware2-production.up.railway.app/api/usuarios/actualizar-presupuesto', { presupuesto }, config);
       // Aquí podrías agregar lógica adicional si es necesario después de actualizar el presupuesto.
     } catch (error) {
       console.error('Error al actualizar el presupuesto:', error);
