@@ -60,7 +60,7 @@ const ControlPresupuesto = ({ presupuesto, gastos, setGastos, setPresupuesto, se
                     setGastos([])
                     setPresupuesto(0)
                     setIsValidPresupuesto(false)
-                    axios.put('http://localhost:4000/api/usuarios/resetear-movimientos', {}, config)
+                    axios.put('https://backend-ing-software-2-juv5yvm2l-luismateo7.vercel.app/api/usuarios/resetear-movimientos', {}, config)
                 })
             }
         })

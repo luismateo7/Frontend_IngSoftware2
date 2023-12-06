@@ -54,10 +54,10 @@ const Modal = ({ setModal, animarModal, setAnimarModal, guardarGasto, gastosEdit
         if (Object.keys(gastosEditar).length > 0) {
             console.log('entra al if');
             const id = gastosEditar.id || gastosEditar._id;
-            await axios.put(`http://localhost:4000/api/movimientos/actualizar-movimiento/${id}`, gasto, config)
+            await axios.put(`https://backend-ing-software-2-juv5yvm2l-luismateo7.vercel.app/api/movimientos/actualizar-movimiento/${id}`, gasto, config)
         } else {
             console.log('entra al else');
-            await axios.post('http://localhost:4000/api/movimientos/crear-movimiento', gasto, config)
+            await axios.post('https://backend-ing-software-2-juv5yvm2l-luismateo7.vercel.app/api/movimientos/crear-movimiento', gasto, config)
         }
     }
 
