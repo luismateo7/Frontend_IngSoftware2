@@ -54,10 +54,10 @@ const Modal = ({ setModal, animarModal, setAnimarModal, guardarGasto, gastosEdit
         if (Object.keys(gastosEditar).length > 0) {
             console.log('entra al if');
             const id = gastosEditar.id || gastosEditar._id;
-            await axios.put(`backendingsoftware2-production.up.railway.app/api/movimientos/actualizar-movimiento/${id}`, gasto, config)
+            await axios.put(`https://backendingsoftware2-production.up.railway.app/api/movimientos/actualizar-movimiento/${id}`, gasto, config)
         } else {
             console.log('entra al else');
-            await axios.post('backendingsoftware2-production.up.railway.app/api/movimientos/crear-movimiento', gasto, config)
+            await axios.post('https://backendingsoftware2-production.up.railway.app/api/movimientos/crear-movimiento', gasto, config)
         }
     }
 

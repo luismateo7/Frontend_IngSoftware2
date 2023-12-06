@@ -86,7 +86,7 @@ function Movimiento() {
   const eliminarGasto = async (id) => {
 
     try {
-      await axios.put(`backendingsoftware2-production.up.railway.app/api/movimientos/eliminar-movimiento/${id}`, {}, config);
+      await axios.put(`https://backendingsoftware2-production.up.railway.app/api/movimientos/eliminar-movimiento/${id}`, {}, config);
       const gastosActualizados = gastos.filter((gasto) => gasto._id !== id);
       setGastos(gastosActualizados);
     } catch (error) {
@@ -101,7 +101,7 @@ function Movimiento() {
       const { _id } = JSON.parse(localStorage.getItem('auth'));
       const getMovimientos = async () => {
         try {
-          const { data } = await axios.get('backendingsoftware2-production.up.railway.app/api/movimientos/listar-movimientos', config);
+          const { data } = await axios.get('https://backendingsoftware2-production.up.railway.app/api/movimientos/listar-movimientos', config);
           setGastos(data);
         } catch (error) {
           console.error('Error al obtener los movimientos:', error);
