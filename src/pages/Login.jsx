@@ -35,7 +35,7 @@ export default function Login() {
         }
 
         try {
-            const { data } = await axios.post(`http://localhost:4000/api/usuarios/login`, { email, password })
+            const { data } = await axios.post(`https://backendingsoftware2-production.up.railway.app/api/usuarios/login`, { email, password })
 
             localStorage.setItem('token', data.token);
 

@@ -40,7 +40,7 @@ export default function Registro() {
         try {
             // Si hay username, entonces se registra con username, sino, se registra sin username
             if (username) {
-                const { data } = await axios.post(`http://localhost:4000/api/usuarios/registro`, { email, password, nombre, apellido, username })
+                const { data } = await axios.post(`https://backendingsoftware2-production.up.railway.app/api/usuarios/registro`, { email, password, nombre, apellido, username })
 
                 localStorage.setItem('token', data.token);
 
@@ -60,7 +60,7 @@ export default function Registro() {
                 })
 
             } else {
-                await axios.post(`http://localhost:4000/api/usuarios/registro`, { email, password, nombre, apellido })
+                await axios.post(`https://backendingsoftware2-production.up.railway.app/api/usuarios/registro`, { email, password, nombre, apellido })
 
                 localStorage.setItem('token', data.token);
 

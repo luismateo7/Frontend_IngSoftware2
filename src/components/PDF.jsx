@@ -29,7 +29,7 @@ export default function PDF() {
         const getMovimientos = async () => {
             try {
                 const { data } = await axios.get(
-                    "http://localhost:4000/api/movimientos/listar-movimientos",
+                    "https://backendingsoftware2-production.up.railway.app/api/movimientos/listar-movimientos",
                     config
                 );
                 console.log(data);
